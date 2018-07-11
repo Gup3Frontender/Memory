@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="bum">ff</div>
+
+<script>
+
+
+        let incomingMessage =  @Html.Raw(@Model.boardCreator.getJsonOfCards());
+    console.log(incomingMessage);
+    document.querySelector(".bum").innerHTML = incomingMessage[0].ImageUrl;
+
+
+    
+
+</script>
