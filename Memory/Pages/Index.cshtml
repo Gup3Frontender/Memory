@@ -4,14 +4,21 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="bum">ff</div>
+<div class="imageContainer"></div>
 
 <script>
 
+    let arrayOfCards = @Html.Raw(@Model.boardCreator.getJsonOfCards());
 
-        let incomingMessage =  @Html.Raw(@Model.boardCreator.getJsonOfCards());
-    console.log(incomingMessage);
-    document.querySelector(".bum").innerHTML = incomingMessage[0].ImageUrl;
+    let output = "";
+
+    for (var i = 0; i < arrayOfCards.length; i++) {
+        let elem = document.createElement("img");
+        console.log(arrayOfCards[i].ImageUrl);
+        elem.src = arrayOfCards[i].ImageUrl;
+        document.querySelector(".imageContainer").appendChild(elem);
+    }
+
 
 
     

@@ -15,10 +15,16 @@ namespace Memory.Pages
 
         public IndexModel()
         {
-            for(int i = 0; i < 10; i++)
-            {
-                boardCreator.AddCardToList(new Card($"kartanumer{i}", i));
-            }
+            boardCreator.AddCardToList(new Card("images/bobr.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/bocian.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/dzik.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/jeż.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/kuna.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/lis.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/pliszka.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/niedzwiedz.jpg", 1));
+            boardCreator.AddCardToList(new Card("images/sowa.jpg", 1));
+            
         }
     }
 }
